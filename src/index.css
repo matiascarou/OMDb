@@ -1,0 +1,777 @@
+body {
+  background: #222324;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: crosshair;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.moviesAndButtonsDiv {
+  width: 100%;
+  height: 94vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0px;
+
+}
+
+.nextPageButtonDiv {
+  /* color: #222324; */
+  color: #b5baba;
+  /* background: #222324; */
+  background: #343434;
+  border: none;
+  font-size: 1em;
+  padding: 10px 0px 10px 0px;
+  margin: 0;
+  height: 45vh;
+  transition: color 0.4s, background 0.4s;
+}
+
+.buttonsDiv {
+  margin: 0;
+  padding: 10px 0px;
+  width: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* margin: auto; */
+  /* align-items: flex-start; */
+  height: 90vh;
+}
+
+.nextPageButtonDiv:hover {
+  /* background: #343434; */
+  background: #b5baba;
+  /* color: #b5baba; */
+  color: black;
+  border: none;
+}
+
+.moviesMainDiv {
+  width: 95vw;
+  margin: auto;
+  padding: 00px 0px 00px;
+  height: 90vh;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieByFiveDiv {
+  width: 90vw;
+  max-width: 90vw;
+  height: 50vh;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  height: auto;
+  /* margin: auto; */
+}
+
+.movieRowDiv {
+  /* size: 50%; */
+  /* height: 40vh; */
+  object-fit: cover;
+  padding: 10px 10px;
+  color: #b5baba;
+  font-size: 0.34em;
+  display: flex;
+  /* width: auto; */
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s;
+  height: auto;
+}
+
+.movieRowDiv:hover {
+  transform: scale(1.03);
+}
+
+.moviesAreEmptyDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.moviesAreEmptyMainDiv {
+  text-justify: center;
+  text-align: center;
+  height: 95vh;
+  /* padding: 300px; */
+  color: #b5baba;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.styledLink {
+  text-align: center;
+  cursor: crosshair;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #b5baba;
+}
+
+.movieSingleImage {
+  /* object-fit: cover; */
+  display: flex;
+  cursor: crosshair;
+  height: auto;
+  max-height: 60vh;
+  max-width: 60vw;
+  vertical-align: middle;
+}
+
+.moviesPaginationImage {
+  /* object-fit: cover; */
+  display: flex;
+  cursor: crosshair;
+  height: auto;
+  height: 40vh;
+  width: 15vw;
+  max-height: 40vh;
+  max-width: 20vw;
+  vertical-align: middle;
+}
+
+.appMainDiv {
+  height: 90vh;
+}
+
+/* FORM */
+.mainFormDiv {
+  color: #b5baba;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 40px;
+  /* width: auto; */
+}
+
+.inputForm {
+  background-color: #2d2f30;
+  border-radius: 10em;
+  font-size: 1.5em;
+  font-weight: 400;
+  cursor: crosshair;
+  margin: 10px;
+  padding: 15px 20px 15px;
+  width: 25em;
+  border: none;
+  font-style: normal;
+  color: #b5baba;
+}
+
+.inputForm:focus {
+  -moz-outline-radius: 10em;
+  outline-width: 0.5;
+  outline-style: groove;
+  outline-color: white;
+  outline: none;
+}
+
+.notSubmitButtonsDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+  width: 100%;
+}
+
+.notSubmitButtonForm {
+  border: none;
+  margin: 10px;
+  padding: 15px 20px 15px;
+  border-radius: 10em;
+  font-size: 1.5em;
+  width: 5em;
+  color: #b5baba;
+  background-color: #2d2f30;
+  transition: transform 0.4s, background 0.4s, color 0.4s;
+}
+
+.notSubmitButtonForm:hover {
+  color: black;
+  background: #b5baba;
+  transform: scale(1.1);
+}
+
+.notSubmitButtonFocus {
+  background-color: #b8b8b8;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.submitButton {
+  color: #b5baba;
+  background-color: #2d2f30;
+  border-radius: 10em;
+  font-size: 1.5em;
+  font-weight: 400;
+  cursor: crosshair;
+  margin: 10px;
+  padding: 15px 20px 15px;
+  border: none;
+  font-style: normal;
+  transition: transform 0.4s, background 0.4s, color 0.4s;
+}
+
+.submitButton:hover {
+  background: #b5baba;
+  transform: scale(1.05);
+  color: black;
+}
+
+.submitButton[disabled] {
+  /* color: #b5baba; */
+  color: red;
+  background-color: #2d2f30;
+  /* background-color: lightgrey; */
+  border-radius: 10em;
+  font-size: 1.5em;
+  font-weight: 400;
+  cursor: crosshair;
+  margin: 10px;
+  padding: 15px 20px 15px;
+  border: none;
+  font-style: normal;
+  transition: transform 0.4s, background 0.4s, color 0.4s;
+}
+
+.submitButton[disabled]:hover {
+  color: red;
+  /* background-color: #2d2f30; */
+  /* background-color: black; */
+  border-radius: 10em;
+  font-size: 1.5em;
+  font-weight: 400;
+  cursor: crosshair;
+  margin: 10px;
+  padding: 15px 20px 15px;
+  border: none;
+  font-style: normal;
+  transition: transform 0.4s, background 0.4s, color 0.4s;
+}
+
+
+/* .submitButton:hover {
+  background-color: #b8b8b8;
+  color: black;
+} */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: auto;
+}
+
+::placeholder {
+  color: #8a9293;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.footerBox {
+  text-align: center;
+  text-justify: center;
+  color: #b5baba;
+  padding: 5px 5px 5px 5px;
+  height: 3vh;
+  /* height: 0.8em; */
+  font-weight: 600;
+  font-size: 1.2em;
+  /* align-items: center; */
+  /* justify-content: center; */
+  text-decoration: none;
+  transition: background 0.4s, color 0.4s;
+}
+
+.footerBox:hover {
+  cursor: crosshair;
+  background-color: #b8b8b8;
+  color: #343434;
+  background: #b5baba;
+  /* transform: scale(1.10); */
+}
+
+.footerDiv {
+  /* height: 50px; */
+  height: auto;
+  background-color: #343434;
+  justify-content: center;
+  align-content: center;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.registerMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 82vh;
+}
+
+.registerFormInput {
+  background-color: #2d2f30;
+  border-radius: 10em;
+  font-size: 1.5em;
+  font-weight: 400;
+  cursor: crosshair;
+  margin: 10px;
+  padding: 15px 20px 15px;
+  width: 15em;
+  border: none;
+  font-style: normal;
+  color: #b5baba;
+}
+
+.registerFormInput:focus {
+  -moz-outline-radius: 10em;
+  outline-width: 0.5;
+  outline-style: groove;
+  outline-color: white;
+  outline: none;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.loginMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60vh;
+}
+
+.homeAndLoginDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.footerFlexItems {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.singleMovieContainer {
+  color: #b5baba;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.singleMovieCastTitleAndPosterDiv {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loadingBarDiv {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+}
+
+.singleMovieButton {
+  padding: 0px 10px;
+  margin: 10px;
+  font-size: 2em;
+  height: 3em;
+  border-radius: 2em;
+  background: #343434;
+  color: #b5baba;
+  border: none;
+  transition: transform 0.4s, background 0.4s, color 0.4s;
+}
+
+.singleMovieButton:hover {
+  color: black;
+  background: #b5baba;
+  transform: scale(1.1);
+}
+
+/* .notSubmitButtonForm {
+  border: none;
+  margin: 10px;
+  padding: 15px 20px 15px;
+  border-radius: 10em;
+  font-size: 1.5em;
+  width: 5em;
+  color: #b5baba;
+  background-color: #2d2f30;
+  transition: transform 0.4s, background 0.4s, color 0.4s;
+} */
+
+
+
+.linkAndButtonDiv {
+  width: 20vw;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+}
+
+/* .singleMovieButton:hover {
+  background: #b5baba;
+  color: black;
+} */
+
+.technicalStuffDiv {
+  padding: 20px;
+  width: auto;
+  margin: auto;
+}
+
+.singleMovieCastDiv {
+  padding: 10px;
+  background: #343434;
+  color: #b5baba;
+  border-radius: 1em;
+  width: 30vw;
+  max-width: 30vw;
+  overflow: scroll;
+  max-height: 50px;
+  margin: 5;
+}
+
+.singleMovieCastDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.singleMovieTitleAndPosterDiv {
+  font-size: 0.8em;
+  text-align: center;
+  height: 90vh;
+  width: auto;
+  max-width: 30vw;
+  margin: 0;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.onlyPosterAndTitleDiv {
+  font-size: 1em;
+  width: auto;
+  width: auto;
+  max-width: 30vw;
+  /* max-width: 40vw; */
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.singleMoviePlotDiv {
+  width: 90%;
+  padding: 10px;
+  background: #343434;
+  color: #b5baba;
+  border-radius: 1em;
+}
+
+.plotAndRatingsDiv {
+  margin: auto;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ratingsTitleAndRatingsDiv {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleMovieRatingsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px;
+  background: #343434;
+  color: #b5baba;
+  border-radius: 1em;
+}
+
+.ratingsGlitterDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.posterNotAvailableOnMoviesDiv {
+  font-size: 1.6em;
+  width: 15vw;
+  /* height: 40vh;
+  width: 15vw; */
+  height: 38vh;
+  padding: 10px;
+  background: #343434;
+  color: #b5baba;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.posterNotAvailableOnSingleMovieDiv {
+  font-size: 1.6em;
+  width: 12em;
+  height: 18em;
+  padding: 10px;
+  background: #343434;
+  color: #b5baba;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  padding: unset;
+}
+
+.noUserContainerDiv {
+  color: #b5baba;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.registerAndLoginButtonsDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainPageButtons {
+  border: none;
+  margin: 10px;
+  padding: 15px 20px 15px;
+  border-radius: 10em;
+  font-size: 1.5em;
+  width: 5em;
+  color: #b5baba;
+  background-color: #2d2f30;
+  transition: transform 0.4s, background 0.4s, color 0.4s;
+}
+
+.mainPageButtons:hover {
+  color: #343434;
+  background: #b5baba;
+  transform: scale(1.04);
+}
+
+.noFavoritesMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.noFavoritesButtonsDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.userHasNoFavoritesDiv {
+  text-justify: center;
+  text-align: center;
+}
+
+.userHasNoFavoritesTitles {
+  margin: 0.5em;
+}
+
+.favoritesImgAndButtonDiv {
+  height: 40vh;
+  max-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+}
+
+.favoritesDeleteButton {
+  height: 2em;
+  border: none;
+  margin: 10px;
+  padding: 0px 0px 0;
+  border-radius: 10em;
+  font-size: 1.2em;
+  width: 5em;
+  color: #b5baba;
+  background-color: #2d2f30;
+  transition: transform 0.4s, background 0.4s, color 0.4s;
+}
+
+.favoritesDeleteButton:hover {
+  color: black;
+  background: #b5baba;
+  transform: scale(1.1);
+}
+
+.forEachUsernameDiv {
+  text-align: center;
+}
+
+.usersFormDiv {
+  margin: auto;
+  width: 90vw;
+  height: 50vh;
+  color: #b5baba;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 40px;
+  /* width: auto; */
+}
+
+.singleUserTitle {
+  text-align: center;
+  text-justify: center;
+  font-weight: 600;
+  font-size: 5em;
+  margin: 0.5em;
+}
+
+.singleUserMainDiv {
+  margin: auto;
+  width: 90vw;
+  height: 90vh;
+  color: #b5baba;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 40px;
+  /* width: auto; */
+}
+
+.favoriteMoviesFromSingleUserDiv {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  width: auto;
+  height: auto;
+  max-height: 49vh;
+  padding: 10px;
+  background: #343434;
+  color: #b5baba;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  text-align: center;
+}
+
+.singleUserFavoriteMovieTitle {
+  font-size: 3.6vh;
+  margin: 0;
+  padding: 0.1em;
+}
+
+.favoriteMoviesFromSingleUserDiv::-webkit-scrollbar {
+  display: none;
+}
+
+.singleUserMoviesDiv {
+  padding: 20px;
+}
+
+.inputAndErrorSubmittingDiv {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* ::-webkit-input-placeholder {
+  text-align: center;
+} */
+
+.userRegisterTitle {
+  color: #b5baba;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.invalidCredentialsTitle {
+  margin: 0;
+  /* color: #b5baba; */
+  color: #9A031E;
+  font-weight: 400;
+}
+
+
