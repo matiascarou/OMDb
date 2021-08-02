@@ -1,4 +1,4 @@
-<h1 align="center">🌎 Planets 🌎</h1>
+<h1 align="center">🎬 OMDb 🎬</h1>
 <p>
 </p>
 
