@@ -1,2 +1,2 @@
-Proyecto individual.
-Creación de una single-page application basada en la API de OMDb para buscar películas. Manipulación de estados con Redux, registro de usuarios, login, autenticación con JWT, lógica de favoritos, búsqueda de usuarios y paginación.
+Creation of a single-page application based on the OMDb API where we can search for movies. 
+State manipulation with Redux, user registration, login, JWT authentication, favorites logic, user search and pagination.
